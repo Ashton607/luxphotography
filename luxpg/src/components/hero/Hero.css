@@ -1,0 +1,112 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  background-color: #0a0a0a;
+  gap: 4rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 700px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid #2a2a2a;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a0a0a0;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #707070;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.hero-btn {
+  margin-top: 0.5rem;
+  padding: 0.9rem 2.5rem;
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  border-radius: 999px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #c9a84c;
+  border-color: #c9a84c;
+  color: #0a0a0a;
+}
+
+/* Preview card */
+.hero-preview {
+  width: 100%;
+  max-width: 800px;
+}
+
+.preview-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #1a1a1a;
+}
+
+.preview-img {
+  height: 220px;
+  background-color: #111;
+}
+
+.img1 {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%);
+}
+
+.img2 {
+  background: linear-gradient(135deg, #161a1a 0%, #0f2318 100%);
+}
+
+.img3 {
+  background: linear-gradient(135deg, #1a1616 0%, #251515 100%);
+}
+
+@media (max-width: 768px) {
+  .preview-card {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-img {
+    height: 160px;
+  }
+}

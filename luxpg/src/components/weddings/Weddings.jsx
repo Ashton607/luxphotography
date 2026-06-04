@@ -1,5 +1,5 @@
 import React from 'react'
-import './Landscape.css'
+import './Weddings.css'
 
 const Weddings = () => {
   return (
