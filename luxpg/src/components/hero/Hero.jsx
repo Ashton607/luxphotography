@@ -15,12 +15,27 @@ const Hero = () => {
       </div>
 
       <div className="hero-preview">
-        <div className="preview-card">
-          <div className="preview-img img1" />
-          <div className="preview-img img2" />
-          <div className="preview-img img3" />
-        </div>
+  <div className="preview-card">
+    <div className="preview-img img1">
+      <div className="img-overlay">
+        <span className="img-name">Ocean Serenity</span>
+        <span className="img-year">2024</span>
       </div>
+    </div>
+    <div className="preview-img img2">
+      <div className="img-overlay">
+        <span className="img-name">Forest Mist</span>
+        <span className="img-year">2024</span>
+      </div>
+    </div>
+    <div className="preview-img img3">
+      <div className="img-overlay">
+        <span className="img-name">Golden Hour</span>
+        <span className="img-year">2023</span>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   )
 }

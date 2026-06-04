@@ -1,9 +1,7 @@
-nav{
+nav {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  padding: 1.2rem 3rem;
-  background:none;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -14,14 +12,19 @@ nav ul {
   gap: 2.5rem;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1.2rem 3rem;
+  background:none;
+  backdrop-filter: blur(10px);
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 999px;
 }
 
 nav ul li {
   font-size: 0.85rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #ffffff, #698b8d);
+  background: linear-gradient(135deg, #ffffff, #86bcc0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
