@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-preview">
-  <div className="preview-card">
+     <div className="preview-card">
     <div className="preview-img img1">
       <div className="img-overlay">
         <span className="img-name">Ocean Serenity</span>
