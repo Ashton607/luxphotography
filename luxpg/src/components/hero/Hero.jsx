@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import './Hero.css'
 import macroImg from '../../assets/macro.jpg'
+import {Link} from 'react-scroll'
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState('24mm');
@@ -14,7 +15,7 @@ const Hero = () => {
           We capture life's most precious moments with elegance,<br />
           emotion, and an eye for timeless beauty.
         </p>
-        <button className="hero-btn">View Our Work</button>
+        <button className="hero-btn"><Link to="hero-preview" smooth={true} duration={500}>View Our Work</Link></button>
       </div>
 
       <div className="hero-preview">
@@ -83,13 +84,13 @@ const Hero = () => {
 
 
     <div className="hero-tabs">
-      <ul>
-        <li className={activeTab === '200mm' ? 'active' : ''} onClick={() => setActiveTab('200mm')}>200mm</li>
-        <li className={activeTab === '48mm' ? 'active' : ''} onClick={() => setActiveTab('48mm')}>48mm</li>
-        <li className={activeTab === '24mm' ? 'active' : ''} onClick={() => setActiveTab('24mm')}>24mm</li>
-        <li className={activeTab === '13mm' ? 'active' : ''} onClick={() => setActiveTab('13mm')}>13mm</li>
-        <li className={activeTab === 'Macro' ? 'active' : ''} onClick={() => setActiveTab('Macro')}>Macro</li>
-      </ul>
+    <ul>
+    <li data-tooltip="Telephoto — 8x" className={activeTab === '200mm' ? 'active' : ''} onClick={() => setActiveTab('200mm')}>200mm</li>
+    <li data-tooltip="2x" className={activeTab === '48mm' ? 'active' : ''} onClick={() => setActiveTab('48mm')}>48mm</li>
+    <li data-tooltip="Wide — 1x" className={activeTab === '24mm' ? 'active' : ''} onClick={() => setActiveTab('24mm')}>24mm</li>
+    <li data-tooltip="Ultra wide — .5x" className={activeTab === '13mm' ? 'active' : ''} onClick={() => setActiveTab('13mm')}>13mm</li>
+    <li data-tooltip="Macro — extreme close-up, reveals hidden details" className={activeTab === 'Macro' ? 'active' : ''} onClick={() => setActiveTab('Macro')}>Macro</li>
+    </ul>
     </div>
 
 
