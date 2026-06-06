@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from "react";
 import './Hero.css'
+import macroImg from '../../assets/macro.jpg'
 
 const Hero = () => {
+  const [activeTab, setActiveTab] = useState('24mm');
+  
   return (
     <div className="hero">
       <div className="hero-content">
@@ -36,6 +39,66 @@ const Hero = () => {
     </div>
   </div>
 </div>
+
+
+
+     <div className="zoom-content">
+      {/* 200mm */}
+      {activeTab === '200mm' && (
+      <div className="img200mm">
+
+      </div>
+      )}
+
+      {/* 48mm */}
+      {activeTab === '48mm' && (
+      <div className="img48mm">
+
+      </div>
+      )}
+
+      {/* 24mm */}
+      {activeTab === '24mm' && (
+      <div className="img24mm">
+
+      </div>
+      )}
+
+
+      {/* 13mm */}
+      {activeTab === '13mm' && (
+      <div className="img13mm">
+
+      </div>
+      )}
+
+
+      {/* Macro */}
+      {activeTab === 'Macro' && (
+      <div className="imgMacro">
+      <div className="imgMacro" style={{ backgroundImage: `url(${macroImg})` }}/>
+      </div>
+      )}
+      </div>
+
+
+    <div className="hero-tabs">
+      <ul>
+        <li className={activeTab === '200mm' ? 'active' : ''} onClick={() => setActiveTab('200mm')}>200mm</li>
+        <li className={activeTab === '48mm' ? 'active' : ''} onClick={() => setActiveTab('48mm')}>48mm</li>
+        <li className={activeTab === '24mm' ? 'active' : ''} onClick={() => setActiveTab('24mm')}>24mm</li>
+        <li className={activeTab === '13mm' ? 'active' : ''} onClick={() => setActiveTab('13mm')}>13mm</li>
+        <li className={activeTab === 'Macro' ? 'active' : ''} onClick={() => setActiveTab('Macro')}>Macro</li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
     </div>
   )
 }
