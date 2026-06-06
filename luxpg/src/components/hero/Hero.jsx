@@ -10,7 +10,10 @@ const Hero = () => {
     <div className="hero">
       <div className="hero-content">
         <span className="hero-badge">Luxury Photography Studio</span>
-        <h1 className="hero-title">Every moment<br />deserves to last forever.</h1>
+        <h1 className="hero-title">
+          <span className="line1">Every moment</span>
+          <span className="line2">deserves to last forever.</span>
+        </h1>
         <p className="hero-subtitle">
           We capture life's most precious moments with elegance,<br />
           emotion, and an eye for timeless beauty.
