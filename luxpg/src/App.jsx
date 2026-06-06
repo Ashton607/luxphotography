@@ -7,6 +7,7 @@ import Hero from './components/hero/Hero'
 import Landscape from './components/landscape/Landscape'
 import Weddings from './components/weddings/Weddings'
 import Portrait from './components/potrait/Potrait'
+import Footer from './components/footer/Footer'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="weddings" element={<Weddings />} />
         <Route path="portrait" element={<Portrait />} />
       </Routes>
+      <Footer/>
     </Router>
   )
 }
