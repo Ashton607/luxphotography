@@ -8,6 +8,7 @@ const Landscape = () => {
       {/* City */}
       <section className="landscape-section">
         <h2 className="section-title">City</h2>
+        <hr />
         <div className="card-grid">
         <div className="card city-card-1">
           <div className="card-overlay">
@@ -36,6 +37,7 @@ const Landscape = () => {
       {/* Nature */}
       <section className="landscape-section">
         <h2 className="section-title">Nature</h2>
+        <hr />
         <div className="card-grid">
           <div className="card nature-card-1">
             <div className="card-overlay">
@@ -61,6 +63,7 @@ const Landscape = () => {
       {/* Sea */}
       <section className="landscape-section">
         <h2 className="section-title">Sea</h2>
+        <hr />
         <div className="card-grid">
           <div className="card sea-card-1">
             <div className="card-overlay">

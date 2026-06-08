@@ -24,7 +24,18 @@
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #1a1a1a;
+}
+
+.landscape-section hr {
+  border: none;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(135deg, #ffffff, #86bcc0);
+  animation: Pulse 5s ease infinite;
+}
+@keyframes Pulse {
+  0%, 100% { opacity: 0.3; width: 40px; }
+  50%       { opacity: 1; width: 99%; }
 }
 
 .card-grid {
@@ -104,6 +115,8 @@
 .card:hover {
   border-color: #2a2a2a;
 }
+
+
 
 
 /*City section*/
