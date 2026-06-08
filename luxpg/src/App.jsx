@@ -8,13 +8,14 @@ import Landscape from './components/landscape/Landscape'
 import Weddings from './components/weddings/Weddings'
 import Portrait from './components/potrait/Potrait'
 import Footer from './components/footer/Footer'
+import ScrollToTop from './ScrollToTop'
 
 function App() {
-
   return (
     <Router>
-       <Navbar/>
-        <PageTitles/>
+      <ScrollToTop />
+      <Navbar/>
+      <PageTitles/>
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="landscape" element={<Landscape/>} />
