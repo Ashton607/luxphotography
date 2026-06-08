@@ -1,0 +1,82 @@
+.weddings {
+  padding: 4rem 3rem;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.weddings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.weddings-section hr {
+  border: none;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(135deg, #ffffff, #86bcc0);
+  animation: Pulse 5s ease infinite;
+}
+@keyframes Pulse {
+  0%, 100% { opacity: 0.3; width: 40px; }
+  50%       { opacity: 1; width: 99%; }
+}
+
+/*Ceremony section*/
+.ceremony-card-1{
+  background-image: url('../../assets/ceremony/ceremony1.jpg');
+  background-size:cover;
+}
+
+.ceremony-card-2{
+  background-image: url('../../assets/ceremony/ceremony2.jpg');
+  background-size:cover;
+  background-position: center 80%;
+}
+
+.ceremony-card-3{
+  background-image: url('../../assets/ceremony/ceremony3.jpg');
+  background-size:cover;
+  background-position: center 80%;
+}
+
+
+/*Reception section*/
+.reception-card-1{
+  background-image: url('../../assets/landscape/city1.png');
+  background-size:cover;
+  background-position: center 80%;
+}
+
+.reception-card-2{
+  background-image: url('../../assets/landscape/city1.png');
+  background-size:cover;
+  background-position: center 80%;
+}
+
+.reception-card-3{
+  background-image: url('../../assets/landscape/city1.png');
+  background-size:cover;
+  background-position: center 80%;
+}
+
+/*Potraits section*/
+.potraits-card-1{
+  background-image: url('../../assets/landscape/city1.png');
+  background-size:cover;
+  background-position: center 80%;
+}
+
+.potraits-card-2{
+  background-image: url('../../assets/landscape/city1.png');
+  background-size:cover;
+  background-position: center 80%;
+}
+
+.potraits-card-3{
+  background-image: url('../../assets/landscape/city1.png');
+  background-size:cover;
+  background-position: center 80%;
+}
