@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Hero />} />
         <Route path="landscape" element={<Landscape/>} />
         <Route path="weddings" element={<Weddings />} />
-        <Route path="portrait" element={<Portrait />} />
+        <Route path="portraits" element={<Portrait />} />
       </Routes>
       <Footer/>
     </Router>

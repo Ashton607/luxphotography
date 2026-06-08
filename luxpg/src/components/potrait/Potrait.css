@@ -1,0 +1,70 @@
+.portrait{
+  padding: 4rem 3rem;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.portrait-section{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.portrait-section hr{
+  border: none;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(135deg, #ffffff, #86bcc0);
+  animation: Pulse 5s ease infinite;
+}
+@keyframes Pulse {
+  0%, 100% { opacity: 0.3; width: 40px; }
+  50%       { opacity: 1; width: 99%; }
+}
+
+/*Studio section*/
+.studio-card-1{
+  background-image: url('../../assets/studio/studio1.png');
+  background-size:cover;
+}
+.studio-card-2{
+  background-image: url('../../assets/studio/studio2.png');
+  background-size:cover;
+  background-position: center 40%;
+}
+.studio-card-3{
+  background-image: url('../../assets/studio/studio3.png');
+  background-size:cover;
+  background-position: center 5%;
+}
+
+/*Outdoor section*/
+.outdoor-card-1{
+  background-image: url('../../assets/outdoor/outdoor1.png');
+  background-size:cover;
+}
+.outdoor-card-2{
+  background-image: url('../../assets/outdoor/outdoor2.png');
+  background-size:cover;
+}
+.outdoor-card-3{
+  background-image: url('../../assets/outdoor/outdoor3.png');
+  background-size:cover;
+}
+
+/*Editorial section*/
+.editorial-card-1{
+  background-image: url('../../assets/editorial/editorial1.png');
+  background-size:cover;
+  background-position: center 35%;
+}
+.editorial-card-2{
+  background-image: url('../../assets/editorial/editorial2.png');
+  background-size:cover;
+}
+.editorial-card-3{
+  background-image: url('../../assets/editorial/editorial3.png');
+  background-size:cover;
+}
