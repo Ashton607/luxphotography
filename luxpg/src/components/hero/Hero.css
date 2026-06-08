@@ -244,9 +244,8 @@
 .hero-tabs ul li {
   padding: 0.5rem 1.4rem;
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.785rem;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   color: #c4c4c4;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
@@ -272,6 +271,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: #1a1a1a;
+  text-transform: uppercase;
   color: #a0a0a0;
   font-size: 0.7rem;
   letter-spacing: 0.05em;

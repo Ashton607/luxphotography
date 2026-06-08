@@ -45,38 +45,36 @@
 
 /*Reception section*/
 .reception-card-1{
-  background-image: url('../../assets/landscape/city1.png');
+  background-image: url('../../assets/reception/reception1.png');
   background-size:cover;
   background-position: center 80%;
 }
 
 .reception-card-2{
-  background-image: url('../../assets/landscape/city1.png');
+  background-image: url('../../assets/reception/reception2.png');
   background-size:cover;
   background-position: center 80%;
 }
 
 .reception-card-3{
-  background-image: url('../../assets/landscape/city1.png');
+  background-image: url('../../assets/reception/reception3.jpg');
   background-size:cover;
   background-position: center 80%;
 }
 
 /*Potraits section*/
 .potraits-card-1{
-  background-image: url('../../assets/landscape/city1.png');
+  background-image: url('../../assets/potrait/portrait1.png');
   background-size:cover;
-  background-position: center 80%;
 }
 
 .potraits-card-2{
-  background-image: url('../../assets/landscape/city1.png');
+  background-image: url('../../assets/potrait/portrait2.png');
   background-size:cover;
   background-position: center 80%;
 }
 
 .potraits-card-3{
-  background-image: url('../../assets/landscape/city1.png');
+  background-image: url('../../assets/potrait/portrait3.png');
   background-size:cover;
-  background-position: center 80%;
 }
