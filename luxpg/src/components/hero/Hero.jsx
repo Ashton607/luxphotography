@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import './Hero.css'
 import macroImg from '../../assets/macro.jpg'
 import {Link} from 'react-scroll'
+import ContactExplore from "../contact-explore/ContactExplore";
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState('24mm');
@@ -18,7 +19,7 @@ const Hero = () => {
           We capture life's most precious moments with elegance,<br />
           emotion, and an eye for timeless beauty.
         </p>
-        <button className="hero-btn"><Link to="hero-preview" smooth={true} duration={500}>View Our Work</Link></button>
+        <button className="hero-btn"><Link to="zoom-content" smooth={true} offset={-20} duration={500}>View more</Link></button>
       </div>
 
       <div className="hero-preview">
@@ -97,9 +98,13 @@ const Hero = () => {
     </div>
 
 
+    <div className="hero-explore">
+    <h2 className="hero-explore-title">Discover More</h2>
+    <hr />
+    <p className="hero-explore-subtitle">Explore our services and learn more about what we offer</p>
 
-
-
+    <ContactExplore/>
+    </div>
 
 
 
