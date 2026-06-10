@@ -1,0 +1,187 @@
+.testimonials {
+  background-color: #0a0a0a;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+}
+
+.testimonials-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.testimonials-divider {
+  border: none;
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, #86bcc0, transparent);
+  margin: 0;
+}
+
+/* Carousel */
+.testimonials-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Cards */
+.t-card {
+  background-color: #1111112c;
+  border: 1px solid #1a1a1a;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.t-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(134,188,192,0.05), transparent 60%);
+  pointer-events: none;
+}
+
+.t-card.center {
+  flex: 1.4;
+  border-color: #2a2a2a;
+  background: #131313;
+  box-shadow: 0 0 60px rgba(134, 188, 192, 0.05);
+}
+
+.t-card.side {
+  flex: 1;
+  opacity: 0.185;
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+.t-quote {
+  font-size: 3rem;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffffff, #86bcc0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.t-text {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: #a0a0a0;
+  margin: 0;
+  letter-spacing: 0.02em;
+  font-style: italic;
+}
+
+.t-card.center .t-text {
+  color: #cccccc;
+}
+
+.t-author {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-top: 1px solid #1f1f1f;
+  padding-top: 1rem;
+}
+
+.t-name {
+  font-size: 1rem;
+  font-weight: 400;
+  background: linear-gradient(135deg, #ffffff, #86bcc0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.05em;
+}
+
+.t-role {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #505050;
+}
+
+/* Controls */
+.testimonials-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.t-btn {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  color: #606060;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.t-btn:hover {
+  color: #86bcc0;
+}
+
+.t-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.t-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.t-dot.active {
+  background: linear-gradient(135deg, #ffffff, #86bcc0);
+  transform: scale(1.4);
+}
+
+@media (max-width: 768px) {
+  .t-card.side {
+    display: none;
+  }
+
+  .testimonials-carousel {
+    padding: 0 1rem;
+  }
+
+  .t-card.center {
+    flex: 1;
+  }
+}

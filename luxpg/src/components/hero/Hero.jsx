@@ -3,6 +3,7 @@ import './Hero.css'
 import macroImg from '../../assets/macro.jpg'
 import {Link} from 'react-scroll'
 import ContactExplore from "../contact-explore/ContactExplore";
+import Testimonials from "../testimonial/Testimonials";
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState('24mm');
@@ -104,6 +105,7 @@ const Hero = () => {
     <p className="hero-explore-subtitle">Explore our services and learn more about what we offer</p>
 
     <ContactExplore/>
+    <Testimonials/>
     </div>
 
 
