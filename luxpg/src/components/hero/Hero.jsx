@@ -7,6 +7,39 @@ import Testimonials from "../testimonial/Testimonials";
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState('24mm');
+
+  useEffect(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const span = entry.target.querySelector('.hero-badge')
+      const line1 = entry.target.querySelector('.line1');
+      const line2 = entry.target.querySelector('.line2');
+      const p = entry.target.querySelector('.hero-subtitle');
+      const button = entry.target.querySelector('.hero-btn')
+      
+      if (entry.isIntersecting) {
+        span.classList.add('animate-in');
+        line1.classList.add('animate-in');
+        line2.classList.add('animate-in');
+        p.classList.add('animate-in');
+        button.classList.add('animate-in');
+      } else {
+        span.classList.remove('animate-in');
+        line1.classList.remove('animate-in');
+        line2.classList.remove('animate-in');
+        p.classList.remove('animate-in');
+        button.classList.remove('animate-in');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const heroContent = document.querySelector('.hero-content');
+  if (heroContent) {
+    observer.observe(heroContent);
+  }
+
+  return () => observer.disconnect();
+}, []);
   
   return (
     <div className="hero">
