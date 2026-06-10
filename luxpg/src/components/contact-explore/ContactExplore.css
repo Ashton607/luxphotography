@@ -15,10 +15,9 @@
   grid-row: 1;
   font-size: clamp(2.8rem, 6vw, 4rem);
   font-weight: 300;
-  line-height: 1.15;
   color: #ffffff;
-  margin: 0 0 1.5rem 0;
-  letter-spacing: 0.01em;
+  
+  letter-spacing: 0.02em;
   align-self: end;
 }
 

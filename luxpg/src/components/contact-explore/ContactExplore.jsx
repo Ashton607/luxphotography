@@ -8,7 +8,7 @@ const ContactExplore = () => {
    <div className="contact-section">
     <h2  className="contact-explore-title">Get In Touch</h2>
   <div className="contact-left">
-    <div  className="contact-divider" />
+    <hr className="contact-divider" />
     <p  className="contact-explore-subtitle">
       Get in touch to discuss your photography needs<br />
       and bring your vision to life.
