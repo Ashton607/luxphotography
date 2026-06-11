@@ -8,6 +8,7 @@ import Testimonials from "../testimonial/Testimonials";
 const Hero = () => {
   const [activeTab, setActiveTab] = useState('24mm');
 
+  {/*Title*/}
   useEffect(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -40,6 +41,34 @@ const Hero = () => {
 
   return () => observer.disconnect();
 }, []);
+
+
+  {/*Preview cards*/}
+const img1Ref = useRef(null)
+const img2Ref = useRef(null)
+const img3Ref = useRef(null)
+
+useEffect(() => {
+  const imgs = [img1Ref, img2Ref, img3Ref]
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      imgs.forEach(ref => {
+        if (ref.current) {
+          if (entry.isIntersecting) {
+            ref.current.classList.add('visible')
+          } else {
+            ref.current.classList.remove('visible')
+          }
+        }
+      })
+    },
+    { threshold: 0.2 }
+  )
+
+  if (img1Ref.current) observer.observe(img1Ref.current)
+  return () => observer.disconnect()
+}, [])
   
   return (
     <div className="hero">
@@ -58,19 +87,19 @@ const Hero = () => {
 
       <div className="hero-preview">
      <div className="preview-card">
-    <div className="preview-img img1">
+    <div ref={img1Ref} className="preview-img img1">
       <div className="img-overlay">
         <span className="img-name">Ocean Serenity</span>
         <span className="img-year">2024</span>
       </div>
     </div>
-    <div className="preview-img img2">
+    <div ref={img2Ref} className="preview-img img2">
       <div className="img-overlay">
         <span className="img-name">Forest Mist</span>
         <span className="img-year">2024</span>
       </div>
     </div>
-    <div className="preview-img img3">
+    <div ref={img3Ref} className="preview-img img3">
       <div className="img-overlay">
         <span className="img-name">Golden Hour</span>
         <span className="img-year">2023</span>
