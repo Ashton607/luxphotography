@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
-import PageTitles from './components/activetab/PageTitles'
 import Hero from './components/hero/Hero'
 import Landscape from './components/landscape/Landscape'
 import Weddings from './components/weddings/Weddings'
@@ -15,7 +14,6 @@ function App() {
     <Router>
       <ScrollToTop />
       <Navbar/>
-      <PageTitles/>
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="landscape" element={<Landscape/>} />

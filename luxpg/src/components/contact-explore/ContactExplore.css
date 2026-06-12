@@ -179,7 +179,7 @@
 
   .contact-explore-title {
     font-size: clamp(2.5rem, 10vw, 4rem);
-    margin-right: 15px;
+    margin-right: 0;
   }
 
   .contact-left {
