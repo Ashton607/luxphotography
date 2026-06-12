@@ -136,13 +136,16 @@
   .contact-section {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    padding: 3rem 1.5rem;
-    gap: 2rem 0;
+    padding: 2rem 1.25rem;
+    gap: 1.5rem 0;
+    margin-top: 60px;
   }
 
   .contact-explore-title {
     grid-column: 1;
     grid-row: 1;
+    font-size: clamp(2.7rem, 10vw, 4rem);
+    margin-right: 25px;
   }
 
   .contact-left {
@@ -150,8 +153,18 @@
     grid-row: 2;
   }
 
+  .contact-btn {
+    width: 70%;
+    margin-left: 50px;
+    font-size: 0.65rem;
+    padding: 0.85rem 1.5rem;
+  }
+
   .contact-right {
-    grid-column: 1;
-    grid-row: 3;
+   display: none;
+  }
+
+  .contact-img {
+    display: none;
   }
 }

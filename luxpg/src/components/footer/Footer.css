@@ -56,3 +56,25 @@
   text-transform: uppercase;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .footer-socials {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-socials a {
+    font-size: 0.65rem;
+  }
+
+  .footer-credit {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+}
