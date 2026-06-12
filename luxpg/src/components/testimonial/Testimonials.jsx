@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from "react";
 import './Testimonials.css'
 
 const testimonials = [
@@ -36,6 +36,37 @@ const Testimonials = () => {
   const next = () => setCurrent(i => (i === testimonials.length - 1 ? 0 : i + 1))
 
   const getIndex = (offset) => (current + offset + testimonials.length) % testimonials.length
+
+   {/*Testimonials*/}
+    useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const h2 = entry.target.querySelector('.testimonials-title')
+        const hr = entry.target.querySelector('.testimonials-divider')
+        const p = entry.target.querySelector('.t-card.center .t-text')
+        const span = entry.target.querySelector('.t-name')
+        
+        if (entry.isIntersecting) {
+          h2.classList.add('animate-in');
+          hr.classList.add('animate-in');
+          p.classList.add('animate-in');
+          span.classList.add('animate-in');
+        } else {
+          h2.classList.remove('animate-in');
+          hr.classList.remove('animate-in');
+          p.classList.remove('animate-in');
+          span.classList.remove('animate-in');
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    const Testimonials = document.querySelector('.testimonials');
+    if (Testimonials) {
+      observer.observe(Testimonials);
+    }
+  
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="testimonials">

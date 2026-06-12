@@ -24,22 +24,41 @@
   50%       { opacity: 1; width: 99%; }
 }
 
+@keyframes appear {
+  0%  { 
+       opacity: 0;
+       transform: scale(1.03); 
+      }
+  100% {
+        transform:scale(1);
+        opacity: 1;
+        }
+}
+
 /*Ceremony section*/
 .ceremony-card-1{
   background-image: url('../../assets/ceremony/ceremony1.jpg');
   background-size:cover;
+  animation: appear 1.5s cubic-bezier(0.34, 2.8, 0.64, 1) forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
 }
 
 .ceremony-card-2{
   background-image: url('../../assets/ceremony/ceremony2.jpg');
   background-size:cover;
   background-position: center 80%;
+  animation: appear 1.5s cubic-bezier(0.34, 2.8, 0.64, 1) forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
 }
 
 .ceremony-card-3{
   background-image: url('../../assets/ceremony/ceremony3.jpg');
   background-size:cover;
   background-position: center 80%;
+  animation: appear 1.5s cubic-bezier(0.34, 2.8, 0.64, 1) forwards;
+  opacity: 0;
 }
 
 

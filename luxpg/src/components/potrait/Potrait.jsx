@@ -2,6 +2,8 @@ import React from 'react'
 import './Potrait.css'
 
 const Potrait = () => {
+
+  
   return (
     <div className="portrait">
     {/*Using the same classNames from landscape.css allows for consistent styling since the css is global*/}
