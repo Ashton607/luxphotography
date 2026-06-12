@@ -288,6 +288,16 @@
   gap: 0.2rem;
 }
 
+.hero-tabs ul.animate-in {
+  animation: ScaleIn 2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: forwards;
+}
+@keyframes ScaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
 .hero-tabs ul li {
   padding: 0.5rem 1.4rem;
   border-radius: 999px;
@@ -295,7 +305,36 @@
   letter-spacing: 0.15em;
   color: #c4c4c4;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Staggered delays for each li */
+.hero-tabs ul li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.hero-tabs ul li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.hero-tabs ul li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hero-tabs ul li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.hero-tabs ul li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+/* Visible state */
+.hero-tabs ul.animate-in li {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-tabs ul li:hover {
@@ -384,8 +423,10 @@
   color: #ffffff;
   margin: 0;
   letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
-
 .hero-explore-subtitle {
   font-size: 0.9rem;
   line-height: 1.8;
@@ -396,6 +437,14 @@
   margin: 0;
   letter-spacing: 0.03em;
   margin-top: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s;
+}
+.hero-explore-title.animate-in,
+.hero-explore-subtitle.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 .hero-explore hr {
   border: none;

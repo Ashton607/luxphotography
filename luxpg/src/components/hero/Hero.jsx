@@ -68,7 +68,56 @@ useEffect(() => {
 
   if (img1Ref.current) observer.observe(img1Ref.current)
   return () => observer.disconnect()
-}, [])
+}, []);
+
+
+ {/*Active Tabs*/}
+  useEffect(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const ul = entry.target.querySelector('.hero-tabs ul')
+      
+      if (entry.isIntersecting) {
+        ul.classList.add('animate-in');
+      } else {
+        ul.classList.remove('animate-in');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const heroTabs = document.querySelector('.hero-tabs');
+  if (heroTabs) {
+    observer.observe(heroTabs);
+  }
+
+  return () => observer.disconnect();
+}, []);
+
+
+ {/*Explore*/}
+  useEffect(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const h2 = entry.target.querySelector('.hero-explore-title')
+      const p = entry.target.querySelector('.hero-explore-subtitle')
+
+      if (entry.isIntersecting) {
+        h2.classList.add('animate-in');
+        p.classList.add('animate-in')
+      } else {
+        h2.classList.remove('animate-in');
+        p.classList.remove('animate-in')
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const heroExplore = document.querySelector('.hero-explore');
+  if (heroExplore) {
+    observer.observe(heroExplore);
+  }
+
+  return () => observer.disconnect();
+}, []);
   
   return (
     <div className="hero">
