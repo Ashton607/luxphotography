@@ -485,7 +485,7 @@
     padding: 0.8rem 2rem;
     font-size: 0.72rem;
     letter-spacing: 0.15em;
-    width: 100%;
+    width: 70%;
     max-width: 280px;
   }
 
@@ -496,7 +496,7 @@
   }
 
   .preview-img {
-    height: 48vh;
+    height: 50vh;
   }
 
   /* Always show overlay on mobile (no hover) */
@@ -561,7 +561,7 @@
 @media (max-width: 480px) {
 
   .preview-img {
-    height: 42vh;
+    height: 50vh;
   }
 
   .img24mm,
@@ -573,7 +573,7 @@
   }
 
   .hero-tabs ul li {
-    padding: 0.4rem 0.75rem;
+    padding: 0.4rem 0.7rem;
     font-size: 0.65rem;
   }
 }
