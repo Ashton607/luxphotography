@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import './Packages.css'
 
 const packages = [
@@ -48,6 +48,40 @@ const packages = [
 ]
 
 const Packages = () => {
+
+
+      useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const h2 = entry.target.querySelector('.packages-title')
+          const hr = entry.target.querySelector('.packages-divider');
+          const p = entry.target.querySelector('.packages-subtitle');
+          const button = entry.target.querySelector('.hero-btn')
+          
+          if (entry.isIntersecting) {
+            span.classList.add('animate-in');
+            line1.classList.add('animate-in');
+            line2.classList.add('animate-in');
+            p.classList.add('animate-in');
+            button.classList.add('animate-in');
+          } else {
+            span.classList.remove('animate-in');
+            line1.classList.remove('animate-in');
+            line2.classList.remove('animate-in');
+            p.classList.remove('animate-in');
+            button.classList.remove('animate-in');
+          }
+        });
+      }, { threshold: 0.1 });
+    
+      const Packages = document.querySelector('.packages');
+      if (Packages) {
+        observer.observe(Packages);
+      }
+    
+      return () => observer.disconnect();
+    }, []);
+
   return (
     <div className="packages">
       <div className="packages-header">
